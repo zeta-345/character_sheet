@@ -1,4 +1,4 @@
-const CACHE_NAME = 'character-dossier-v1';
+const CACHE_NAME = 'character-dossier-v2';
 const ASSETS = [
   './',
   './index.html',
