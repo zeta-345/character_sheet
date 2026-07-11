@@ -32,7 +32,7 @@
     --danger:#A6674F;
   }
   *{box-sizing:border-box;}
-  html,body{margin:0;padding:0;}
+  html,body{margin:0;padding:0; overflow-x:hidden;}
   body{
     background:
       radial-gradient(ellipse at 20% -10%, #00000012, transparent 60%),
@@ -418,6 +418,13 @@
     display:grid;
     grid-template-columns:1fr 1fr;
     gap:16px;
+  }
+  @media (max-width:480px){
+    .dossier-top{flex-direction:column;}
+    .photo-box{width:84px; height:104px;}
+    .stamps{flex-direction:column; align-items:stretch;}
+    .stamp{transform:none; justify-content:space-between; width:100%;}
+    .stamp.alt{transform:none;}
   }
   @media (max-width:640px){.two-col{grid-template-columns:1fr;}}
 
