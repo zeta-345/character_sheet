@@ -425,6 +425,17 @@
     .stamps{flex-direction:column; align-items:stretch;}
     .stamp{transform:none; justify-content:space-between; width:100%;}
     .stamp.alt{transform:none;}
+    input[type=text], textarea, select{min-width:0;}
+    .field-row label{flex-basis:56px;}
+    .rel-row{
+      grid-template-columns:1fr;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      gap:6px;
+    }
+    .rel-row .string{display:none;}
+    .rel-row .icon-btn{align-self:flex-end;}
   }
   @media (max-width:640px){.two-col{grid-template-columns:1fr;}}
 
