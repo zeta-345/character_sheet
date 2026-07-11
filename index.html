@@ -764,7 +764,7 @@
   </div>
 
   <div class="view-tabs">
-    <button class="view-tab active" id="tabSheetBtn">조서 작성</button>
+    <button class="view-tab active" id="tabSheetBtn">프로필 작성</button>
     <button class="view-tab" id="tabNetworkBtn">인물관계도</button>
   </div>
 
@@ -781,7 +781,7 @@
       </div>
     </div>
 
-    <!-- 우측: 선택된 인물 조서 -->
+    <!-- 우측: 선택된 인물 프로필 -->
     <div id="dossierWrap"></div>
   </div>
 
@@ -873,7 +873,7 @@
     const wrap = document.getElementById('folderList');
     wrap.innerHTML = '';
     if(!state.characters.length){
-      wrap.innerHTML = '<div class="empty-cabinet">아직 등록된 인물이 없습니다.<br>“새 인물 등록”으로 첫 조서를 작성하세요.</div>';
+      wrap.innerHTML = '<div class="empty-cabinet">아직 등록된 인물이 없습니다.<br>“새 인물 등록”으로 첫 프로필을 작성하세요.</div>';
       return;
     }
     state.characters.forEach(c=>{
@@ -895,7 +895,7 @@
       wrap.innerHTML = `
         <div class="dossier">
           <div class="empty-dossier">
-            <div class="big">열람할 조서가 없습니다</div>
+            <div class="big">열람할 프로필이 없습니다</div>
             새 인물을 등록하면 이곳에 프로필이 표시됩니다.
             <br><button id="emptyNewBtn">＋ 새 인물 등록</button>
           </div>
@@ -968,7 +968,7 @@
         </div>
 
         <div class="footer-bar">
-          <button class="del-btn" id="delBtn">이 조서 삭제</button>
+          <button class="del-btn" id="delBtn">이 프로필 삭제</button>
           <span class="saved-note" id="savedNote">저장 대기 중</span>
         </div>
       </div>
@@ -1027,7 +1027,7 @@
     }
 
     document.getElementById('delBtn').addEventListener('click', ()=>{
-      showConfirm(`'${c.name || '(이름 없음)'}' 조서를 삭제할까요? 되돌릴 수 없습니다.`, ()=>{
+      showConfirm(`'${c.name || '(이름 없음)'}' 프로필을 삭제할까요? 되돌릴 수 없습니다.`, ()=>{
         state.characters = state.characters.filter(x=>x.id!==c.id);
         activeId = state.characters.length ? state.characters[0].id : null;
         save(); render();
@@ -1239,7 +1239,7 @@
     const wrap = document.getElementById('networkView');
     const chars = state.characters;
     if(!chars.length){
-      wrap.innerHTML = '<div class="network-empty">등록된 인물이 없습니다.<br>먼저 "조서 작성" 탭에서 인물을 등록해주세요.</div>';
+      wrap.innerHTML = '<div class="network-empty">등록된 인물이 없습니다.<br>먼저 "프로필 작성" 탭에서 인물을 등록해주세요.</div>';
       return;
     }
 
