@@ -1,6 +1,6 @@
 {
-  "name": "캐릭터 조서",
-  "short_name": "캐릭터조서",
+  "name": "캐릭터빌더",
+  "short_name": "캐릭터빌더",
   "description": "창작 캐릭터를 위한 조서 형식 캐릭터 시트 빌더",
   "start_url": "./index.html",
   "scope": "./",
